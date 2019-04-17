@@ -1,4 +1,5 @@
 <?php
+require_once('identifier.php');
 
 include("connexion_db.php");
 
@@ -85,20 +86,20 @@ else
                         <td> <?php echo $user['login']  ?> </td>
                         <td> <?php echo $user['role']  ?> </td>
                         <td>
-                        <a href="editerUser.php?idU=<?php echo $user['iduser'] ?>"> <span class="glyphicon glyphicon-edit"> </span> </a>
+                            <a href="editerUser.php?idU=<?php echo $user['iduser'] ?>"> <span class="glyphicon glyphicon-edit"> </span> </a>
                             &nbsp;
                             <a onclick="return confirm('êtes vous sûrs de vouloir le supprimer ?')" href="supprimerUser.php?idU=<?php echo $user['iduser'] ?>"> <span class="glyphicon glyphicon-trash"> </span> </a>
                             &nbsp;
                             <a href="activerUser.php?idU=<?php echo $user['iduser'] ?> &etat=<?php echo $user['etat'] ?>">
-                        <?php
-                         if($user['etat']==1)
-                             echo '<span class="glyphicon glyphicon-remove">';
-                         else
-                             echo '<span class="glyphicon glyphicon-ok">';
+                                <?php
+                                if($user['etat']== 1)
+                                    echo '<span class="glyphicon glyphicon-remove">';
+                                else
+                                    echo '<span class="glyphicon glyphicon-ok">';
 
-                        ?>
-                        </a>
-                         </td>
+                                ?>
+                            </a>
+                        </td>
                     </tr>
                 <?php } ?>
 

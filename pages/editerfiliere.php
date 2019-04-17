@@ -1,4 +1,5 @@
 <?php
+require_once('identifier.php');
 require_once('connexion_db.php');
 $idf=isset($_GET['idF'])?$_GET['idF']:0;
 $requete="select * from Filiere where idFiliere=$idf";
@@ -16,7 +17,7 @@ $niveau=$filiere['niveau'];
  <head>
     <meta charset="UTF-8">
     <title>Edition d'une Filière</title>
-    <script type="text/javascript" src="js.js"></script>
+
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/monstyle.css" />
  </head>

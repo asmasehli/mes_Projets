@@ -3,7 +3,7 @@
  <head>
     <meta charset="UTF-8">
     <title>Page blanche</title>
-    <script type="text/javascript" src="js.js"></script>
+
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/monstyle.css" />
  </head>

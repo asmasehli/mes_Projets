@@ -1,4 +1,5 @@
 <?php
+    require_once('identifier.php');
 
         include("connexion_db.php");
 
@@ -43,7 +44,7 @@
  <head>
     <meta charset="UTF-8">
     <title>gestion des filieres</title>
-    <script type="text/javascript" src="js.js"></script>
+
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/monstyle.css" />
  </head>
@@ -82,6 +83,7 @@
                <button type="submit" class="btn btn-success"> <span class="glyphicon glyphicon-search"> </span>
                  chercher ...</button>
                   &nbsp &nbsp
+
                   <a href="NouvelleFiliere.php">
                   <span class="glyphicon glyphicon-plus"> </span>
                      Nouvelle Filière
@@ -133,7 +135,7 @@
                    <ul class="pagination">
                    <?php for($i=1;$i<=$nbrePage;$i++){?>
 
-                    <li class="<?php if($i==$page) echo 'active' ?>"> <a href="filieres.php?page=<?php echo $i ; ?>">
+                    <li class="<?php if($i==$page) echo 'active' ?>"> <a href="filieres.php?page=<?php echo $i ; ?> &nomf=<?php echo $nomf  ?> &niveauf=<?php echo $niveauf  ?>">
                      <?php echo $i; ?> </a> </li>
 
                    <?php } ?>
